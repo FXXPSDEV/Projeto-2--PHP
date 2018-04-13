@@ -10,6 +10,8 @@ include_once "src/partials/_head.php"
 
 ?>
 
+
+
 <?php if(isset($_GET['del'])){
     UserDAO::delete($_GET['del']);
 }
@@ -32,12 +34,10 @@ include_once "src/partials/_head.php"
                 </div>
                 <div class="navi">
                     <ul>
-                        <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
-                        <li><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Workflow</span></a></li>
-                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Statistics</span></a></li>
-                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calender</span></a></li>
-                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
-                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Setting</span></a></li>
+                        <li class="active"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Página principal</span></a></li>
+                        <li><a href="onclick="tabelao()";"><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Lista de usuários cadastrados</span></a></li>
+                        <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Calendário de ações</span></a></li>
+             
                     </ul>
                 </div>
             </div>
@@ -46,7 +46,14 @@ include_once "src/partials/_head.php"
     <!-- table -->
     
 
-   <table class="table table-dark table-striped  table-responsive  table-bordered table-hover  text-center">
+  
+    
+  
+</body>
+
+<script type="text/javascript">
+    function tabelao(){
+            <table class="table table-dark table-striped  table-responsive  table-bordered table-hover  text-center">
    <?= FlashMessage::printMessage(); ?>  
   <thead>
     <tr>
@@ -106,29 +113,8 @@ include_once "src/partials/_head.php"
             ?>
   </tbody>
 </table>
-    
-    <div id="add_project" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header login-header">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h4 class="modal-title">Add Project</h4>
-                </div>
-                <div class="modal-body">
-                            <input type="text" placeholder="Project Title" name="name">
-                            <input type="text" placeholder="Post of Post" name="mail">
-                            <input type="text" placeholder="Author" name="passsword">
-                            <textarea placeholder="Desicrption"></textarea>
-                    </div>
-                <div class="modal-footer">
-                    <button type="button" class="cancel" data-dismiss="modal">Close</button>
-                    <button type="button" class="add-project" data-dismiss="modal">Save</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-</body>
+return true;
+	
+		}
+ 
+ </script>
