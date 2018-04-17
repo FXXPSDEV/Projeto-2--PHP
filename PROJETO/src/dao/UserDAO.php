@@ -6,9 +6,9 @@ class UserDAO {
         $db = Database::getConnection();
 
         $stmt = $db->prepare("INSERT INTO users 
-        (username, lastname, cpf, rg, tfc, tfr, email, senha, endereco, complemento, cidade, estado, cep) 
+        (username, lastname, cpf, rg, tfc, tfr, email, senha, endereco, complemento, cidade, estado, cep,pergunta,resposta) 
         VALUES 
-        (:username, :lastname, :usercpf, :userrg, :usertfc, :usertfr, :useremail, :password, :userendereco, :usercomplemento, :usercidade, :userestado, :usercep);");
+        (:username, :lastname, :usercpf, :userrg, :usertfc, :usertfr, :useremail, :password, :userendereco, :usercomplemento, :usercidade, :userestado, :usercep, :userpergunta,:userresposta);");
 
         $stmt->execute(array(
           ':username' => $user->getUsername(),
@@ -24,6 +24,10 @@ class UserDAO {
           ':usercidade' => $user->getUsercidade(),
           ':userestado' => $user->getUserestado(),
           ':usercep' => $user->getUsercep(),
+          ':userpergunta' => $user->getUserpergunta(),
+          ':userresposta' => $user->getUserresposta(),
+          
+
         ));
 
         return $stmt->rowCount();
@@ -69,7 +73,7 @@ class UserDAO {
     public static function listAlter($a) {
         $db = Database::getConnection();
 
-        $msqli = "SELECT username, lastname, cpf, rg, tfc, tfr, email, endereco, complemento, cidade, estado, cep FROM users WHERE id = $a";
+        $msqli = "SELECT username, lastname, cpf, rg, tfc, tfr, email, endereco, complemento, cidade, estado, cep,pergunta,resposta FROM users WHERE id = $a";
         $result = $db->query($msqli);
         
         if ($result->rowCount() > 0) {
@@ -83,7 +87,7 @@ class UserDAO {
         $db = Database::getConnection();
 
         $stmt = $db->prepare("UPDATE users SET
-        username = :username, lastname = :lastname, cpf = :usercpf, rg = :userrg, tfc = :usertfc, tfr = :usertfr, email = :useremail, senha = :password, endereco = :userendereco, complemento = :usercomplemento, cidade = :usercidade, estado = :userestado, cep = :usercep WHERE id = :userid"); 
+        username = :username, lastname = :lastname, cpf = :usercpf, rg = :userrg, tfc = :usertfc, tfr = :usertfr, email = :useremail, senha = :password, endereco = :userendereco, complemento = :usercomplemento, cidade = :usercidade, estado = :userestado, cep = :usercep, pergunta =:userpergunta, resposta = :userresposta WHERE id = :userid"); 
 
         $stmt->execute(array(
           ':userid' => $user->getUserid(),
@@ -100,6 +104,9 @@ class UserDAO {
           ':usercidade' => $user->getUsercidade(),
           ':userestado' => $user->getUserestado(),
           ':usercep' => $user->getUsercep(),
+          ':userpergunta' => $user->getUserpergunta(),
+          ':userresposta' => $user->getUserresposta(),
+
         ));
 
         return $stmt->rowCount();

@@ -22,6 +22,9 @@
         $user->setUsercidade($_POST['cidade']);
         $user->setUserestado($_POST['estado']);
         $user->setUsercep($_POST['cep']);
+        $user->setUserpergunta($_POST['pergunta']);
+        $user->setUserresposta($_POST['resposta']);
+        
     /*} else {
         echo 'Senhas não conferem';        
     }*/

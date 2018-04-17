@@ -39,6 +39,8 @@ include_once "src/partials/_head.php";
     var cidade = document.getElementById("cidade").value;
     var estado = document.getElementById("estado").value;
     var cep = document.getElementById("cep").value;
+    var pergunta = document.getElementById("pergunta").value;
+    var resposta = document.getElementById("resposta").value;
     if(true && verificaCheck()){
   if(nome ==""){
 
@@ -89,6 +91,17 @@ include_once "src/partials/_head.php";
       document.getElementById('senha').focus();
 
     }
+    
+    if(pergunta ==""){
+      alert("A pergunta não pode ser vazia!");
+      return false;
+      document.getElementById('pergunta').focus();
+    }
+    if(resposta ==""){
+      alert("Preencha sua resposta");
+      return false;
+      document.getElementById('resposta').focus();
+    }
 
     if(endereco ==""){
       alert("Preencha seu Endereço!");
@@ -121,6 +134,7 @@ include_once "src/partials/_head.php";
       document.getElementById('cep').focus();
     }
 
+    
   return true;
   }else {
 
@@ -192,6 +206,18 @@ include_once "src/partials/_head.php";
       <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
     </div>
   </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="pergunta">Digite aqui sua pergunta de segurança</label>
+      <input type="text" class="form-control" name="pergunta" id="pergunta" placeholder="Ex: Qual o nome do seu cachorro?">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="resposta">Resposta para a pergunta de segurança</label>
+      <input type="text" class="form-control" name="resposta" id="resposta" placeholder="Sua resposta">
+    </div>
+  </div>
+
   <div class="form-group">
     <label for="endereco">Endereço</label>
     <input type="text" class="form-control" name="endereco" value = "<?= $row['endereco']?> " id="endereco" placeholder="Sua rua, seu bairro...">

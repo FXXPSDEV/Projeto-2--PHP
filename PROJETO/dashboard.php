@@ -71,6 +71,8 @@ include_once "src/partials/_head.php"
       <th scope="col">Cidade</th>
       <th scope="col">Estado</th>
       <th scope="col">CEP</th>
+      <th scope="col">Pergunta</th>
+      <th scope="col">Resposta</th>
       <th scope="col">Editar</th>
       <th scope="col">Deletar</th>
       
@@ -98,11 +100,13 @@ include_once "src/partials/_head.php"
                     <td><?php echo $row["cidade"] ?></td>
                     <td><?php echo $row["estado"] ?></td>
                     <td><?php echo $row["cep"] ?></td>
+                    <td><?php echo $row["pergunta"] ?></td>
+                    <td><?php echo $row["resposta"] ?></td>
                      <form action ="alterar.php" method = "GET" >
-                        <td><a href="/alterar.php"><button onclick="" name="alt"value = "<?php echo $row["id"]; ?>">Editar</button></a></td>
+                        <td><a href="/alterar.php"><button name="alt"value = "<?php echo $row["id"]; ?>">Editar</button></a></td>
                     </form>
                     <form method = "GET">
-                        <td><button onclick="return confirm('Confirmar?');" name="del" value = "<?php echo $row["id"]; ?>">Remover</button></td>
+                        <td><button name="del" value = "<?php echo $row["id"]; ?>">Remover</button></td>
                      </form> 
                     <?php
                          }

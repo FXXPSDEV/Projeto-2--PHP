@@ -188,6 +188,20 @@ include_once "src/partials/_head.php";
       <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
     </div>
   </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="pergunta">Digite aqui sua pergunta de segurança</label>
+      <input type="text" class="form-control" name="pergunta" id="pergunta" placeholder="Ex: Qual o nome do seu cachorro?">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="resposta">Resposta para a pergunta de segurança</label>
+      <input type="text" class="form-control" name="resposta" id="resposta" placeholder="Sua resposta">
+    </div>
+  </div>
+
+
+
   <div class="form-group">
     <label for="endereco">Endereço</label>
     <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Sua rua, seu bairro...">

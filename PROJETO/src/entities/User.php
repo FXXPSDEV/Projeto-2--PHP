@@ -16,6 +16,8 @@ class User {
     private $usercidade;
     private $userestado;
     private $usercep;
+    private $userpergunta;
+    private $userresposta;
 
 
 
@@ -131,4 +133,24 @@ class User {
         return $this->usercep;
     }
 
+    public function setUserpergunta($userpergunta) {
+        $this->userpergunta = $userpergunta;
+    }
+
+    public function getUserpergunta() {
+        return $this->userpergunta;
+    }
+
+    public function setUserresposta($userresposta) {
+        $this->userresposta = $userresposta;
+    }
+
+    public function getUserresposta() {
+        return $this->userresposta;
+    }
+
 }
+
+    
+
+    

@@ -1,8 +1,8 @@
 <?php
 
 class FlashMessage {
-    public const OK = 'ok';
-    public const ERROR = 'error';
+     const OK = 'ok';
+     const ERROR = 'error';
 
     public static function printMessage() {
         if(isset($_SESSION['flash_message']) && $_SESSION['flash_message']['status'] == 'ok') {

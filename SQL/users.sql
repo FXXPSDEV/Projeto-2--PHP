@@ -1,5 +1,7 @@
 create database login_db;
 
+
+use login_db;
 CREATE TABLE `users` (
 
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -34,5 +36,4 @@ CREATE TABLE `users` (
 
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
-select * from users;
-SELECT * FROM users where email = 'dodo@a';
+SELECT * from users
