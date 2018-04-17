@@ -6,7 +6,7 @@ class UserDAO {
         $db = Database::getConnection();
 
         $stmt = $db->prepare("INSERT INTO users 
-        (username, lastname, cpf, rg, tfc, tfr, email, senha, endereco, complemento, cidade, estado, cep,pergunta,resposta) 
+        (username, lastname, cpf, rg, tfc, tfr, email, password, endereco, complemento, cidade, estado, cep, pergunta, resposta) 
         VALUES 
         (:username, :lastname, :usercpf, :userrg, :usertfc, :usertfr, :useremail, :password, :userendereco, :usercomplemento, :usercidade, :userestado, :usercep, :userpergunta,:userresposta);");
 
@@ -43,7 +43,7 @@ class UserDAO {
 
         $rows = $stmt->fetchAll();
 
-        $user_db_password = $rows[0]['senha'];
+        $user_db_password = $rows[0]['password'];
 
         if ($user->getPassword() == $user_db_password) {
             return true;

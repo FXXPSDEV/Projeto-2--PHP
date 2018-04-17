@@ -3,16 +3,16 @@
 session_start();
 
 require_once "src/utils/FlashMessage.php";
-
 include_once 'src/partials/_head.php';
 include_once 'src/partials/_navcadastro.php';
-include_once "src/partials/_head.php";
 
 ?>
 
-<div class = "container">
-<div class="wrapper col-lg-6">   
-        
+
+<div class = "container centered">
+
+<div class="wrapper col-lg-6 centered ">   
+
         <form action="sign_in.php" method="post" name="Login_Form" class="form-signin">
             <?= FlashMessage::printMessage(); ?>  
 
