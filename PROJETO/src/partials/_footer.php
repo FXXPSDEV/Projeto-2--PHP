@@ -1,23 +1,20 @@
 
 <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <span class="copyright">Copyright &copy; FXX.PS DEV 2018</span>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
-                <a href="#">Privacidade</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Termos de uso</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+
+  <div class="container">
+    <div class="span12">
+      <span>Copyright &copy; FXX.PS DEV 2018</span>
+
+      <ul class="list-inline">
+      </br>
+        <li class="list-inline-item"> <span> <a href="#">Privacidade</a></span> </li>
+        <li class="list-inline-item"> <span><a href="#">Termos de uso</a></span> </li>
+      </ul>
+      
+      
+</div> 
+
+</footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

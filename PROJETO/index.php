@@ -1,5 +1,6 @@
 
-<?php include_once 'src/partials/_head.php';
+<?php 
+      include_once 'src/partials/_head.php';
       include_once 'src/partials/_header.php';
       include_once 'src/partials/_nav.php';
 

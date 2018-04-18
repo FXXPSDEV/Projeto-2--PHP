@@ -5,7 +5,7 @@ session_start();
 require_once '../src/utils/FlashMessage.php';
 include_once '../src/partials/_head.php';
 include_once '../src/partials/_navcadastro.php';
-include_once '../src/partials/_head.php';
+
 
 ?>
 

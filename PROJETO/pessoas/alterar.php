@@ -7,8 +7,6 @@ require_once '../src/dao/UserDAO.php';
 require_once '../src/utils/Database.php';
 include_once '../src/partials/_head.php';
 include_once '../src/partials/_navcadastro.php';
-include_once '../src/partials/_head.php';
-
 ?>
 
 <script> 
@@ -210,11 +208,11 @@ include_once '../src/partials/_head.php';
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="pergunta">Digite aqui sua pergunta de segurança</label>
-      <input type="text" class="form-control" name="pergunta" id="pergunta" placeholder="Ex: Qual o nome do seu cachorro?">
+      <input type="text" class="form-control" value = "<?= $row['pergunta']?>" name="pergunta" id="pergunta" placeholder="Ex: Qual o nome do seu cachorro?">
     </div>
     <div class="form-group col-md-6">
       <label for="resposta">Resposta para a pergunta de segurança</label>
-      <input type="text" class="form-control" name="resposta" id="resposta" placeholder="Sua resposta">
+      <input type="text" class="form-control" value = "<?= $row['resposta']?>" name="resposta" id="resposta" placeholder="Sua resposta">
     </div>
   </div>
 
