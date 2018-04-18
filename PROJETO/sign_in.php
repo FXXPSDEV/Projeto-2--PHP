@@ -17,10 +17,10 @@
     if ($status) {
         $_SESSION['user'] = serialize($user);
         FlashMessage::setMessage('Usuário logado com sucesso.', FlashMessage::OK);
-        header('Location: /dashboard.php');
+        header('Location: /pessoas/dashboard.php');
     } else {
         FlashMessage::setMessage('Credenciais incorretas favor tentar novamente.', FlashMessage::ERROR);
-        header('Location: /login.php');
+        header('Location: login.php');
     }
 
     

@@ -63,10 +63,10 @@ class UserDAO {
 
         if ($linhasAfetadas > 0) {
             FlashMessage::setMessage('Usuário deletado com sucesso.', FlashMessage::OK);
-            return header('Location: login.php');
+            return header('Location: ../pessoas/index.php');
         } else {
             FlashMessage::setMessage('Ocorreu um problema ao deletar o usuário.', FlashMessage::ERROR);
-            return header('Location: login.php');
+            return header('Location: ../pessoas/index.php');
         }
     }
 

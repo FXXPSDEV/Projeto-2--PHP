@@ -15,7 +15,7 @@
               <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="login.php">Entrar / Cadastrar</a>
+              <a class="nav-link js-scroll-trigger" href="/login.php">Entrar / Cadastrar</a>
             </li>
           </ul>
         </div>

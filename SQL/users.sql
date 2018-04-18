@@ -31,9 +31,13 @@ CREATE TABLE `users` (
   `estado` varchar(255) DEFAULT NULL,
   
   `cep` varchar(255) DEFAULT NULL,
+  
+  `pergunta` varchar(255) DEFAULT NULL,
+  
+  `resposta` varchar(255) DEFAULT NULL,
 
   PRIMARY KEY (`id`)
 
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 SELECT * from users

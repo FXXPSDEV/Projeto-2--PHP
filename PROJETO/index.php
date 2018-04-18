@@ -1,11 +1,12 @@
 
-<?php include_once 'src/partials/_head.php'?>
+<?php include_once 'src/partials/_head.php';
+      include_once 'src/partials/_header.php';
+      include_once 'src/partials/_nav.php';
 
-<?php include_once 'src/partials/_header.php'?>
-  <body id="page-top">
+?>
 
 
-<?php include_once 'src/partials/_nav.php'?>
+ <body id="page-top">
 
     <!-- Time -->
     <section class="bg-light" id="team">

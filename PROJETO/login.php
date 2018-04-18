@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once "src/utils/FlashMessage.php";
+require_once 'src/utils/FlashMessage.php';
 include_once 'src/partials/_head.php';
 include_once 'src/partials/_navcadastro.php';
 
@@ -24,7 +24,7 @@ include_once 'src/partials/_navcadastro.php';
             
             <button class="btn btn-lg btn-primary btn-block"  name="submit" value="login" type="submit" tabindex="3">Entrar</button>  			
             <hr />
-            <a href="cadastro.php" class="btn btn-lg btn-default btn-block">Cadastrar-se</a>
+            <a href="pessoas/cadastro.php" class="btn btn-lg btn-default btn-block">Cadastrar-se</a>
         </form>	
       
     </div>

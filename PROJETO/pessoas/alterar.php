@@ -2,12 +2,12 @@
 
 session_start();
 
-require_once "src/utils/FlashMessage.php";
-require_once 'src/dao/UserDAO.php';
-require_once 'src/utils/Database.php';
-include_once 'src/partials/_head.php';
-include_once 'src/partials/_navcadastro.php';
-include_once "src/partials/_head.php";
+require_once '../src/utils/FlashMessage.php';
+require_once '../src/dao/UserDAO.php';
+require_once '../src/utils/Database.php';
+include_once '../src/partials/_head.php';
+include_once '../src/partials/_navcadastro.php';
+include_once '../src/partials/_head.php';
 
 ?>
 
@@ -152,8 +152,8 @@ include_once "src/partials/_head.php";
         foreach($result as $row){
             
         }
-
     ?>
+   
 
 <section id="form" class="row align-items-center justify-content-center"> 
     
@@ -271,7 +271,7 @@ include_once "src/partials/_head.php";
   </div>
   <div id="center">
   <div class="down">
-    <a href="/src/downloads/Termos-Servico.doc">Clique aqui para efetuar o download dos termos de serviço</a>
+    <a href="../src/downloads/Termos-Servico.doc">Clique aqui para efetuar o download dos termos de serviço</a>
   </div>
   
   <div class="form-group">
@@ -282,14 +282,14 @@ include_once "src/partials/_head.php";
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary" name="id" value="<?= $id?> " id="Cadastrar">Cadastrar</button>
+  <button type="submit" class="btn btn-primary" name="id" value="<?= $id?> " id="alterar">Alterar</button>
   </div>
 </form>
 
 </section>
         
 
-<?php include_once 'src/partials/_footer.php'?>
+<?php include_once '../src/partials/_footer.php'?>
 
 </body>
 

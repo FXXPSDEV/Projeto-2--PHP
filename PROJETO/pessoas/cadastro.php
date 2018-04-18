@@ -2,11 +2,10 @@
 
 session_start();
 
-require_once "src/utils/FlashMessage.php";
-
-include_once 'src/partials/_head.php';
-include_once 'src/partials/_navcadastro.php';
-include_once "src/partials/_head.php";
+require_once '../src/utils/FlashMessage.php';
+include_once '../src/partials/_head.php';
+include_once '../src/partials/_navcadastro.php';
+include_once '../src/partials/_head.php';
 
 ?>
 
@@ -22,6 +21,7 @@ include_once "src/partials/_head.php";
     }
     }
 </script>
+
 
 <script>
   function verificaFINAL(){
@@ -139,7 +139,7 @@ include_once "src/partials/_head.php";
 
 <section id="form" class="row align-items-center justify-content-center"> 
     
-<form onsubmit="return verificaFINAL()" action="register.php" method="POST" class="col-md-6">
+<form onsubmit="return verificaFINAL()" action="../pessoas/register.php" method="POST" class="col-md-6">
 <?= FlashMessage::printMessage(); ?> 
 
 
@@ -273,7 +273,7 @@ include_once "src/partials/_head.php";
 </section>
 
 
-<?php include_once 'src/partials/_footer.php'?>
+<?php include_once '../src/partials/_footer.php'?>
 
 </body>
 
