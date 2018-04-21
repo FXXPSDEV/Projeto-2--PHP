@@ -3,10 +3,16 @@
 session_start();
 require_once 'src/dao/UserDAO.php';
 require_once 'src/utils/FlashMessage.php';
+require_once 'src/utils/Database.php';
 include_once 'src/partials/_headLogin.php';
 include_once 'src/partials/_navLogin.php';
 ?>
 
+<?php 
+  
+  UserDAO::recuperar($_POST['email']);
+  $email = $_POST['email'];
+?>
 <body>
 <div class="container">
   
@@ -16,16 +22,20 @@ include_once 'src/partials/_navLogin.php';
     <div class="col-md-4">
 
       <section class="login-form">
-        <form method="post" action="recuperar_senha.php" role="login" name="Login_Form">
+        <form method="post" action="recup.php" role="login" name="Login_Form">
            <?= FlashMessage::printMessage(); ?>  
           <img src="img/password.png" class="img-responsive" alt="senha" />
-          <label for="email">Digite seu email cadastrado</label>
-          <input type="email" name="email" placeholder="Email" required class="form-control input-lg" >
+          
+
+
+          <label for="senha" >Digite sua nova senha</label>
+          <input type="password" name="senha" placeholder="Nova senha" required class="form-control input-lg" >
           </br>
-          <button type="submit" name="confirm" id="confirm" value="confirm" class="btn btn-lg btn-dark btn-block">Verificar Email</button>
+        
+          <button type="submit" value="<?= $email ?>" name="confirm" value="confirm" class="btn btn-lg btn-dark btn-block">Confirmar Alteração de Senha</button>
           </hr>
         
-        
+        </form>
         </br>
         <div class="form-links">
         
@@ -50,5 +60,15 @@ include_once 'src/partials/_footer.php';
 
 
 
+<script>
+  function verificaFINAL(){
+    var senha = document.getElementById("senha").value;;
+    if(true && verificaCheck()){
+  if(senha ==""){
 
- 
+      alert("Preencha seu senha!");
+      return false;
+      document.getElementById('senha').focus();
+
+    }
+</script>

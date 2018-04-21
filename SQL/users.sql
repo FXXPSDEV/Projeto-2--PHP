@@ -40,4 +40,5 @@ CREATE TABLE `users` (
 
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
-SELECT * from users
+SELECT * from users;
+SELECT pergunta,resposta FROM users where email= 'tridops@hotmail.com'

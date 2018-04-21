@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
    
-    <title>Login -FXXPS DEV </title>
+    <title>Dashboard -FXXPS DEV </title>
 
      <!-- Icone Página e bootstrap-->
      <link rel="icon" href="/img/logos/icon.png">

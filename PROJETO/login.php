@@ -19,6 +19,7 @@ include_once 'src/partials/_navLogin.php';
       <section class="login-form">
         <form method="post" action="sign_in.php" role="login" name="Login_Form">
            <?= FlashMessage::printMessage(); ?>  
+           
           <img src="img/logos/icon.png" class="img-responsive" alt="fxxpsdevicon" />
           <input type="email" name="email" placeholder="Email" required class="form-control input-lg" >
           
